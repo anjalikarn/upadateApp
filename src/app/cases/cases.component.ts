@@ -9,7 +9,7 @@ import { Cases } from '../cases';
 })
 export class CasesComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'age', 'status'];
+  displayedColumns: string[] = ['name', 'age', 'gender', 'status'];
   data: Cases[] = [];
   isLoadingResults = true;
 

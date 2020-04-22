@@ -30,7 +30,6 @@ export class CasesDetailsComponent implements OnInit {
   }
 
   deleteCases(id: any) {
-    debugger;
     this.isLoadingResults = true;
     this.api.deleteCases(id)
       .subscribe(res => {

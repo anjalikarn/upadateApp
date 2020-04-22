@@ -102,15 +102,18 @@ export class ApiService {
 
   
 
-  /*getStatistic(status){
+  getStatistic(status): Observable<any>{
+    debugger;
     let catData = {
       "sdata":{
           "action_type":"get_stats",
           "status":status
       },
     }
+   // alert(JSON.stringify(catData))
     return this.http.post<any>(apiUrl, JSON.stringify(catData));
-  }*/
+  }
+
   /*updateCases(id: string, cases: Cases): Observable<any> {
     const url = `${apiUrl}/${id}`;
     return this.http.put(url, cases, httpOptions).pipe(
@@ -127,11 +130,11 @@ export class ApiService {
     );
   }*/
 
- getStatistic(status: string): Observable<Statistic> {
+ /*getStatistic(status: string): Observable<Statistic> {
     const url = `${apiUrl}/daily/${status}`;
     return this.http.get<Statistic>(url).pipe(
       tap(_ => console.log(`fetched statistic status=${status}`)),
       catchError(this.handleError<Statistic>(`getStatistic status=${status}`))
     );
-  }
+  }*/
 }
